@@ -100,7 +100,7 @@ ConnectionPool.prototype.select = function (cb) {
 
 /**
  * Handler for the "set status" event emitted but the connections. It will move
- * the connection to it's proper connection list (unless it was closed).
+ * the connection to its proper connection list (unless it was closed).
  *
  * @param  {String} status - the connection's new status
  * @param  {String} oldStatus - the connection's old status
@@ -166,7 +166,7 @@ ConnectionPool.prototype._onConnectionRevived = function (connection) {
 /**
  * Handler used to update or create a timeout for the connection which has died
  * @param  {ConnectionAbstract} connection
- * @param  {Boolean} alreadyWasDead - If the connection was preivously dead this must be set to true
+ * @param  {Boolean} alreadyWasDead - If the connection was previously dead this must be set to true
  */
 ConnectionPool.prototype._onConnectionDied = function (connection, alreadyWasDead) {
   var timeout;
@@ -262,7 +262,7 @@ ConnectionPool.prototype.getConnections = function (status, limit) {
 };
 
 /**
- * Add a single connection to the pool and change it's status to "alive".
+ * Add a single connection to the pool and change its status to "alive".
  * The connection should inherit from ConnectionAbstract
  *
  * @param {ConnectionAbstract} connection - The connection to add
@@ -281,7 +281,7 @@ ConnectionPool.prototype.addConnection = function (connection) {
 };
 
 /**
- * Remove a connection from the pool, and set it's status to "closed".
+ * Remove a connection from the pool, and set its status to "closed".
  *
  * @param  {ConnectionAbstract} connection - The connection to remove/close
  */
@@ -329,7 +329,7 @@ ConnectionPool.prototype.setHosts = function (hosts) {
 };
 
 /**
- * Close the conncetion pool, as well as all of it's connections
+ * Close the connection pool, as well as all of its connections
  */
 ConnectionPool.prototype.close = function () {
   this.setHosts([]);
